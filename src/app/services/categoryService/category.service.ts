@@ -13,8 +13,6 @@ export class CategoryService {
   apiUrl="https://localhost:44311/api/cars/getall";
   constructor(private httpClient:HttpClient) { }
   getCategories():Observable<ListResponseModel<Category>>{
-  
-    this.httpClient
     return this.httpClient.get<ListResponseModel<Category>>(this.apiUrl);
   }
 }

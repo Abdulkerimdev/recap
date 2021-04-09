@@ -11,7 +11,7 @@ import { BrandService } from 'src/app/services/brandService/brand.service';
 export class BrandComponent implements OnInit {
 
   brands:Brand[]=[];
-  
+  apiUrl="https://localhost:44311/api/brands/getall";
 
   constructor(private brandService:BrandService) { }
 
@@ -25,7 +25,7 @@ export class BrandComponent implements OnInit {
     this.brandService.getBrands().subscribe(Response=>{
       this.brands= Response.data
     })
-    console.log();
+
 
     } ;
 

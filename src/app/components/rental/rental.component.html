@@ -1,18 +1,16 @@
-<table class="table text-center">
+<table class="table table-dark table-striped table-bordered text-center">
     <thead> 
         <tr> 
           <th>#</th>
-          <th>Araç</th>
           <th>Kiralama Tarihi</th>
-          <th>Getirildiği Tarig</th>
+          <th>Getirildiği Tarih</th>
 
         </tr>
   
   
     </thead>
-    <tr *ngFor="let rental of rentals">
+    <tr  class="table-warning text-black" *ngFor="let rental of rentals">
         <td>{{rental.id}}</td>
-        <td>{{rental.carId}}</td>
         <td>{{rental.rentDate}}</td>
         <td>{{rental.returnDate}}</td>
   

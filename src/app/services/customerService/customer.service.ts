@@ -11,8 +11,7 @@ export class CustomerService {
   apiUrl="https://localhost:44311/api/customers/getall";
   constructor(private httpClient:HttpClient) { }
   getCustomers():Observable<ListResponseModel<Customer>>{
-  
-    this.httpClient
+
     return this.httpClient.get<ListResponseModel<Customer>>(this.apiUrl);
   }
 }

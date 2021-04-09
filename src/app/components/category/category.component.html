@@ -1,10 +1,19 @@
-<ul  class="list-group">
-   
-  <li (click)="setCurrentCategory(category)" *ngFor="let category of categories" 
-  [class]="getCurrentCategoryClass(category)">{{category.brandName}}</li>
- 
-</ul>
 
-<h5 *ngIf="currentCategory">
-  {{currentCategory.brandName}}
-</h5>
+<ul  class="list-group">
+  <li class="bg-danger list-group-item text-white" routerLink="/cars">Markalar</li>
+
+    <li (click)="setCurrentBrand(brand)" 
+    routerLink="/cars/category/{{brand.brandId}}"
+    *ngFor="let brand of brands" 
+    [class]="getCurrentBrandClass(brand)">
+    {{brand.brandName}}</li>
+   
+  <li class="bg-danger list-group-item text-white" routerLink="/cars">Renkler</li>
+    
+    <li (click)="setCurrentColor(color)" 
+    routerLink="/cars/category/{{color.colorId}}"
+    *ngFor="let color of colors" 
+    [class]="getCurrentColorClass(color)">
+    {{color.colorName}}</li>
+
+</ul>
