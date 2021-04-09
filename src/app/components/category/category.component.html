@@ -1,0 +1,10 @@
+<ul  class="list-group">
+   
+  <li (click)="setCurrentCategory(category)" *ngFor="let category of categories" 
+  [class]="getCurrentCategoryClass(category)">{{category.brandName}}</li>
+ 
+</ul>
+
+<h5 *ngIf="currentCategory">
+  {{currentCategory.brandName}}
+</h5>
